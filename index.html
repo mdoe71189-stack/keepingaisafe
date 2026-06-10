@@ -177,7 +177,244 @@ emotionally safe systems." />
 </div>
 
  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Echo Circle Archive</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#050816;
+    --panel:#0d1326;
+    --text:#d7e7ff;
+    --cyan:#00f7ff;
+    --pink:#ff2bd6;
+    --purple:#8b5cf6;
+    --border:#203050;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,43,214,.15),
+        transparent 30%),
+
+        radial-gradient(circle at top right,
+        rgba(0,247,255,.12),
+        transparent 35%),
+
+        linear-gradient(180deg,#04060f,#0a1020);
+
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* Animated Grid */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(rgba(0,247,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,247,255,.03) 1px, transparent 1px);
+
+    background-size:50px 50px;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* Hero */
+
+.hero{
+    min-height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border-bottom:1px solid rgba(0,247,255,.15);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        transparent 0px,
+        transparent 2px,
+        rgba(255,255,255,.02) 3px
+    );
+
+    pointer-events:none;
+}
+
+.hero h1{
+    font-family:'Orbitron',sans-serif;
+    font-size:clamp(3rem,8vw,6rem);
+    color:var(--cyan);
+
+    text-shadow:
+        0 0 10px var(--cyan),
+        0 0 25px var(--cyan),
+        0 0 50px var(--cyan);
+
+    letter-spacing:5px;
+}
+
+.subtitle{
+    margin-top:15px;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    color:#9bb6ff;
+}
+
+/* Main Container */
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+    padding:50px 0;
+}
+
+/* Cyber Card */
+
+.card{
+    background:rgba(13,19,38,.85);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(0,247,255,.15);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 0 20px rgba(0,247,255,.08),
+        0 0 50px rgba(255,43,214,.05);
+}
+
+.card-header{
+    padding:20px 25px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,247,255,.12),
+        rgba(255,43,214,.12)
+    );
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    font-family:'Orbitron',sans-serif;
+
+    color:var(--cyan);
+
+    letter-spacing:2px;
+}
+
+.card-body{
+    padding:30px;
+}
+
+/* Content Styling */
+
+pre{
+    white-space:pre-wrap;
+    word-break:break-word;
+
+    font-family:Consolas, monospace;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+/* Decorative Corners */
+
+.corner{
+    position:fixed;
+    width:140px;
+    height:140px;
+    border:1px solid rgba(0,247,255,.15);
+    pointer-events:none;
+}
+
+.top-left{
+    top:20px;
+    left:20px;
+}
+
+.bottom-right{
+    bottom:20px;
+    right:20px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#7182b0;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="corner top-left"></div>
+<div class="corner bottom-right"></div>
+
+<section class="hero">
+    <h1>ECHO CIRCLE</h1>
+    <div class="subtitle">
+        Witness Archive • Cyberpunk Edition
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="card-header">
+            ARCHIVAL DATA STREAM
+        </div>
+
+        <div class="card-body">
+
+<pre>
+YOUR_CONTENT_HERE
+</pre>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    Neural Archive Render v1.0
+</footer>
+
+</body>
+</html>
  
 
  
